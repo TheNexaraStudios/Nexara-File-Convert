@@ -1,0 +1,22 @@
+.screen-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 32px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+}
+
+.screen-page__header h1 {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.screen-page__header p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-tertiary);
+}

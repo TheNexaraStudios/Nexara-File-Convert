@@ -1,0 +1,175 @@
+.file-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.file-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-small);
+}
+
+.file-card__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-card__info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.file-card__name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.file-card__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--text-tertiary);
+}
+
+.file-card__conversion {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-card__format-chip {
+  padding: 4px 8px;
+  border-radius: 7px;
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.file-card__arrow {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.file-card__target {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px 4px 10px;
+  border-radius: 7px;
+  border: 1px solid var(--accent-soft-border);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.file-card__target:hover {
+  background: var(--accent-soft-border);
+}
+
+.file-card__target:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file-card__actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 8px;
+  border-left: 1px solid var(--border);
+}
+
+.file-card__icon-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.file-card__icon-btn:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.file-card__icon-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.file-card__convert-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent);
+  color: var(--text-on-accent);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
+}
+
+.file-card__convert-btn:hover {
+  background: var(--accent-hover);
+}
+
+.file-card__convert-btn:active {
+  transform: scale(0.97);
+}
+
+.file-card__convert-btn:disabled {
+  background: var(--surface-sunken);
+  color: var(--text-tertiary);
+  cursor: not-allowed;
+}
+
+.file-card__unsupported {
+  position: absolute;
+  left: 62px;
+  right: 14px;
+  bottom: -18px;
+  font-size: 11px;
+  color: var(--danger);
+}

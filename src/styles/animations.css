@@ -1,0 +1,111 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up-toast {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-soft-border);
+  }
+  100% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+/*
+  Deliberately no fill-mode ("both"/"forwards") here: every animation's end
+  state already matches the element's natural resting style (opacity: 1,
+  transform: none-equivalent), so there's nothing to "hold". A held
+  fill-mode would leave a non-`none` `transform` on the element forever,
+  which — per the CSS spec — makes that element the containing block for
+  any `position: fixed` descendant (e.g. a modal opened from inside an
+  animated card), trapping it in the card's bounds instead of the viewport.
+*/
+.anim-fade-in {
+  animation: fade-in var(--duration-base) var(--ease-standard);
+}
+
+.anim-rise-in {
+  animation: rise-in var(--duration-slow) var(--ease-decelerate);
+}
+
+.anim-scale-in {
+  animation: scale-in var(--duration-base) var(--ease-decelerate);
+}
+
+.anim-slide-in-right {
+  animation: slide-in-right var(--duration-slow) var(--ease-decelerate);
+}
+
+.anim-slide-up-toast {
+  animation: slide-up-toast var(--duration-base) var(--ease-decelerate);
+}
+
+.anim-spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

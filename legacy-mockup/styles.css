@@ -1,0 +1,256 @@
+/* Basic styles for the application */
+:root {
+    --background: #ffffff;
+    --surface: #f5f5f5;
+    --surface-secondary: #e0e0e0;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --border: #cccccc;
+    --accent: #007bff;
+    --accent-hover: #0056b3;
+    --success: #4caf50;
+    --warning: #ff9800;
+    --danger: #f44336;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --radius-small: 8px;
+    --radius-medium: 16px;
+    --radius-large: 24px;
+}
+
+body {
+    font-family: Inter, SF Pro style system fonts, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-medium);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.hero {
+    text-align: center;
+    padding: 48px 24px;
+}
+
+.hero-heading {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.converter {
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.converter-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-large);
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-medium);
+    padding: 48px;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.upload-text {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.upload-helper {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.file-list {
+    margin-bottom: 24px;
+}
+
+.convert-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-medium);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.convert-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.recent-conversions {
+    padding: 48px 24px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.conversion-list {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-conversions {
+    padding: 48px 24px;
+}
+
+.conversion-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.conversion-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-medium);
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.conversion-card:hover {
+    background-color: var(--surface-secondary);
+}
+
+.format-pair {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.why-us {
+    padding: 48px 24px;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.feature-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-medium);
+    padding: 16px;
+    width: calc(33.333% - 16px);
+}
+
+.feature-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.security {
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.footer {
+    padding: 48px 24px;
+    background-color: var(--surface);
+    color: var(--text-secondary);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-column {
+    margin-bottom: 16px;
+}
+
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+    .converter-card {
+        max-width: 100%;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+}

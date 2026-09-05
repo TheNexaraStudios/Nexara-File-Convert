@@ -1,0 +1,102 @@
+/*
+  Nexara design tokens.
+  Semantic, theme-aware custom properties. Every color used in the app
+  should resolve through one of these — never a raw hex value in a
+  component stylesheet.
+*/
+
+:root {
+  /* ---- Light theme (default) ---- */
+  --background: #f6f6f8;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-hover: #f0f0f4;
+  --surface-overlay: rgba(255, 255, 255, 0.86);
+  --surface-sunken: #eeeef2;
+
+  --border: #e3e3e9;
+  --border-strong: #d1d1db;
+
+  --text-primary: #1a1a22;
+  --text-secondary: #63636f;
+  --text-tertiary: #96969f;
+  --text-on-accent: #ffffff;
+
+  --accent: #4a5cf0;
+  --accent-hover: #3b4bdb;
+  --accent-active: #2f3ec2;
+  --accent-soft: #eceeff;
+  --accent-soft-border: #d6daff;
+
+  --success: #1fa971;
+  --success-soft: #e5f7ee;
+  --warning: #b9740a;
+  --warning-soft: #fdf1dc;
+  --danger: #d9432f;
+  --danger-soft: #fbeae7;
+
+  --shadow-color: 220deg 20% 30%;
+  --shadow-small: 0 1px 2px hsl(var(--shadow-color) / 0.08), 0 1px 1px hsl(var(--shadow-color) / 0.06);
+  --shadow-medium: 0 4px 14px hsl(var(--shadow-color) / 0.10), 0 2px 4px hsl(var(--shadow-color) / 0.06);
+  --shadow-large: 0 16px 40px hsl(var(--shadow-color) / 0.16), 0 4px 10px hsl(var(--shadow-color) / 0.08);
+
+  --scrollbar-thumb: #d4d4dc;
+  --scrollbar-thumb-hover: #bcbcc8;
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --font-sans: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Code", "Consolas", "SFMono-Regular", Menlo, monospace;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 250ms;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"],
+:root[data-theme="system"][data-system-theme="dark"] {
+  --background: #17171c;
+  --surface: #1f1f26;
+  --surface-raised: #262631;
+  --surface-hover: #2c2c38;
+  --surface-overlay: rgba(31, 31, 38, 0.88);
+  --surface-sunken: #131318;
+
+  --border: #303039;
+  --border-strong: #3d3d48;
+
+  --text-primary: #f2f2f5;
+  --text-secondary: #a4a4b0;
+  --text-tertiary: #6f6f7c;
+  --text-on-accent: #ffffff;
+
+  --accent: #7b87f7;
+  --accent-hover: #8f99f9;
+  --accent-active: #a3acfa;
+  --accent-soft: #2a2c4a;
+  --accent-soft-border: #3b3e6b;
+
+  --success: #3fce97;
+  --success-soft: #16302a;
+  --warning: #e0a53f;
+  --warning-soft: #362c17;
+  --danger: #f0685a;
+  --danger-soft: #3a2220;
+
+  --shadow-color: 240deg 40% 2%;
+  --shadow-small: 0 1px 2px hsl(var(--shadow-color) / 0.35), 0 1px 1px hsl(var(--shadow-color) / 0.3);
+  --shadow-medium: 0 4px 14px hsl(var(--shadow-color) / 0.45), 0 2px 4px hsl(var(--shadow-color) / 0.3);
+  --shadow-large: 0 20px 48px hsl(var(--shadow-color) / 0.55), 0 6px 14px hsl(var(--shadow-color) / 0.35);
+
+  --scrollbar-thumb: #3a3a45;
+  --scrollbar-thumb-hover: #48484f;
+
+  color-scheme: dark;
+}

@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Rust build output (src-tauri/.gitignore also excludes /target and
+# /gen/schemas relative to src-tauri itself; this covers the same paths
+# from the repo root for tooling that only reads the top-level file)
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Local tool state — not part of the project itself
+.claude/
+.continue/

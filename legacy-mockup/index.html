@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FileConverter</div>
+        <nav class="nav">
+            <a href="#" class="nav-link">Convert</a>
+            <a href="#" class="nav-link">Tools</a>
+            <a href="#" class="nav-link">Pricing</a>
+            <a href="#" class="nav-link">API</a>
+            <a href="#" class="nav-link">Help</a>
+            <a href="#" class="nav-link">Sign In</a>
+        </nav>
+        <button class="primary-btn">Start Converting</button>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero-heading">Convert any file, beautifully.</h1>
+        <p class="hero-description">Transform documents, images, videos, audio files, archives, presentations, and other file types quickly and securely.</p>
+    </section>
+
+    <section class="converter">
+        <div class="converter-card">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon"></div>
+                <p class="upload-text">Drop files here or choose files</p>
+                <p class="upload-helper">Documents, images, audio, video, archives and more</p>
+            </div>
+            <div class="file-list" id="fileList"></div>
+            <button class="convert-btn" id="convertBtn">Convert Files</button>
+        </div>
+    </section>
+
+    <section class="recent-conversions">
+        <h2 class="section-title">Recent Conversions</h2>
+        <ul class="conversion-list" id="conversionList"></ul>
+    </section>
+
+    <section class="popular-conversions">
+        <h2 class="section-title">Popular Conversions</h2>
+        <div class="conversion-cards">
+            <!-- Example conversion card -->
+            <div class="conversion-card">
+                <span class="format-pair">JPG → PNG</span>
+                <button class="convert-btn">Convert</button>
+            </div>
+            <!-- More cards -->
+        </div>
+    </section>
+
+    <section class="why-us">
+        <h2 class="section-title">Why use this converter?</h2>
+        <div class="feature-cards">
+            <!-- Example feature card -->
+            <div class="feature-card">
+                <h3 class="feature-title">Fast conversion</h3>
+                <p class="feature-description">Effortlessly convert your files in record time.</p>
+            </div>
+            <!-- More cards -->
+        </div>
+    </section>
+
+    <section class="security">
+        <h2 class="section-title">Security and Privacy</h2>
+        <p>Your files remain private. Automatically deleted after processing.</p>
+        <div class="privacy-icons">
+            <!-- Privacy icons -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h3 class="footer-title">Product</h3>
+            <a href="#" class="footer-link">File Converter</a>
+            <a href="#" class="footer-link">Image Converter</a>
+            <!-- More links -->
+        </div>
+        <!-- More footer columns -->
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
